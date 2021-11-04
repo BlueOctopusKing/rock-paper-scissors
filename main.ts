@@ -3,7 +3,7 @@ let Score_B = 0
 let set_hand_to = 0
 input.onButtonPressed(Button.A, function () {
     score_A += 1
-    if (score_A == 5) {
+    if (score_A == 7) {
         for (let index = 0; index < 4; index++) {
             basic.showLeds(`
                 . . # . .
@@ -27,7 +27,7 @@ input.onButtonPressed(Button.A, function () {
 })
 input.onButtonPressed(Button.B, function () {
     Score_B += 1
-    if (Score_B == 5) {
+    if (Score_B == 7) {
         for (let index = 0; index < 4; index++) {
             basic.showLeds(`
                 . # # . .
