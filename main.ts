@@ -6,10 +6,10 @@ input.onButtonPressed(Button.A, function () {
     if (score_A == 5) {
         for (let index = 0; index < 4; index++) {
             basic.showLeds(`
-                . . . . .
-                # . . . #
-                # . . . #
-                # . # . #
+                . . # . .
+                . # . # .
+                . # # # .
+                . # . # .
                 . # . # .
                 `)
             basic.showLeds(`
@@ -20,6 +20,7 @@ input.onButtonPressed(Button.A, function () {
                 . . . . .
                 `)
         }
+        basic.showString("Winner!")
         score_A = 0
         Score_B = 0
     }
@@ -29,11 +30,11 @@ input.onButtonPressed(Button.B, function () {
     if (Score_B == 5) {
         for (let index = 0; index < 4; index++) {
             basic.showLeds(`
-                . . . . .
-                # . . . #
-                # . . . #
-                # . # . #
+                . # # . .
                 . # . # .
+                . # # . .
+                . # . # .
+                . # # . .
                 `)
             basic.showLeds(`
                 . . . . .
@@ -43,6 +44,7 @@ input.onButtonPressed(Button.B, function () {
                 . . . . .
                 `)
         }
+        basic.showString("Winner!")
         Score_B = 0
         score_A = 0
     }
