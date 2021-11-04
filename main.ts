@@ -3,23 +3,23 @@ let Score_B = 0
 let set_hand_to = 0
 input.onButtonPressed(Button.A, function () {
     score_A += 1
-    for (let index = 0; index < 4; index++) {
-        basic.showLeds(`
-            . . . . .
-            # . . . #
-            # . . . #
-            # . # . #
-            . # . # .
-            `)
-        basic.showLeds(`
-            . . . . .
-            . . . . .
-            . . . . .
-            . . . . .
-            . . . . .
-            `)
-    }
     if (score_A == 5) {
+        for (let index = 0; index < 4; index++) {
+            basic.showLeds(`
+                . . . . .
+                # . . . #
+                # . . . #
+                # . # . #
+                . # . # .
+                `)
+            basic.showLeds(`
+                . . . . .
+                . . . . .
+                . . . . .
+                . . . . .
+                . . . . .
+                `)
+        }
         score_A = 0
         Score_B = 0
     }
@@ -79,7 +79,7 @@ input.onGesture(Gesture.Shake, function () {
             . # # # .
             . . . . .
             `)
-    } else {
+    } else if (set_hand_to == 3) {
         basic.showLeds(`
             . . . . .
             . . . . .
